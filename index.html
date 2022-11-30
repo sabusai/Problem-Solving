@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charest="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handon 6</title>
+    <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+    <div class="container">
+    <div class="item"><h1>JavaScript</h1>
+    <h1>Problem Solving</h1>
+    </div>
+    <div class="list">
+    <div class="box1">
+    <h2>Find the Smaller Angle</h2>
+    <pre>
+    var min = (a,b)=>{
+  if(a>b) return b
+  return a;
+}
+var Minimal_Angle = (h, m) => 
+{
+   min_angle = m*6;
+  hour_angle = h*30+(15*min_angle)/180;
+  angle = Math.abs(hour_angle-min_angle);
+  return min(angle,360-angle)     
+};
+ </pre></div>
+ <div class="box2">
+ <h2>Check whether the year is Leap year or not.</h2>
+ <pre>
+ var Check_Leap = (year) => 
+{
+ if(year%4===0){
+  if(year%100===0){
+  if(year%400===0){
+  return "Leap Year"
+  
+  }
+  else{
+  return "Non Leap Year"
+  }
+
+  }
+  else{
+  return "Leap Year"
+  }
+  }
+  
+  else{
+  return "Non Leap Year"
+  }
+  
+
+};
+ </pre>
+ </div>
+ <div class="box3">
+ <h2>Perfect Number Check.</h2>
+ <pre>
+var Perfect_Check = (N) => {
+  sum = 1;
+        if(N===1){
+          return "YES"
+        }
+        else if(N%2===1){
+          return "NO"
+        }
+        else{
+          
+          for(let i=2; i*i<=N; i++){
+            if(N%i===0){
+              sum += i+N/i
+            }
+          }
+        }
+          return sum===N?"YES":"NO"  
+
+};
+</pre>
+ </div>
+ <div class="box4">
+ <h2>Reverse a Number.</h2>
+ <pre>
+ var Reverse_Number = (N) => 
+{
+  rev = 0
+  while(N>0){
+  r = N%10;
+  rev = rev*10+r
+  N = parseInt(N/10);
+  
+ }
+  return rev
+
+
+};
+</pre>
+ </div>
+ <div class="box 5">
+ <h2>Substring Check.</h2>
+ <pre>
+var Substring_Check = (S1, S2) => 
+{
+   const arr = S1.split(" ")
+  for(let i=0; i < arr.length; i++){
+  if(arr[i]===S2){
+  return "YES"
+  }
+  }
+ return "NO"
+ 
+};
+</pre>
+ </div>
+    </div>
+    </div>
+    </body>
+    </html>
